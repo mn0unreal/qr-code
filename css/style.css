@@ -1,50 +1,75 @@
-*{
-    background-color: #cbdae9;
-
+/************** reset **************/
+*{    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
 }
-#card{
-    margin: 35px auto;
-    padding: 10px;
-    width: 40%;
-    border-radius: 3%;
-    background-color: #fdfeff;
-    text-align: center;
-
+a {
+    text-decoration:none;
+    display: inline-block;
 }
-
-img {display: inline-block;
+img{
     width: 100%;
-    padding: 2px;
-    border-radius: 3%;
-    background-color: #fdfeff;
-
-
+    /* display: inline-block; */
 }
-.paragraph1{
-    background-color: #fdfeff;
-    /* font-size: 15px; */
+ul,ol{
+    list-style:none;
+}
+/************** general **************/
+@font-face {
+    font-family: Outfit ;
+    src: url(/fonts/Outfit-Regular.ttf);
+    font-weight:400;
+}
+@font-face {
+    font-family: Outfit ;
+    src: url(/fonts/Outfit-Bold.ttf);
+    font-weight:700;
+}
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(212, 45%, 89%);
+    --Grayish-blue: hsl(220, 15%, 55%);
+    --Dark-blue: hsl(218, 44%, 22%);
+}
+body {
+    background-color: var(--Light-gray);
     text-align: center;
+    font-size:15px;
+    font-family: Outfit;
+    min-height:100vh;
 }
-.paragraph1 h2{
-    background-color: #fdfeff;
-
-    font-size: 20px;
-    margin-bottom :20px;
-
-}
-.paragraph1 p{
-    background-color: #fdfeff;
-
-    font-size: 15px;
-    margin: 10px auto;
-    width: 50%;
-    
+/************** main **************/
+main {
+    background-color:var(--White);
+    width:87%;
+    margin:60px auto;
+    padding: 15px;
+    border-radius:1.3em;
 
 }
-.attribution{
-    text-align: center;
+main img {
+    border-radius: 0.625em;
+    margin-bottom: 1.5em;
 }
+main h1 {
+    color: var(--Dark-blue);
+    font-size: 1.5em;
+    margin-bottom: 0.75em;
+}
+main p{
+    color: var(--Grayish-blue);
+    line-height: 1.5em;
+    padding: 0 0.9em;
+}
+/************** media **************/
+@media screen and (min-width:768px) {
+    main{
+        width:50%;
+    }
+} 
+@media screen and (min-width:900px) {
+    main{
+        width:30%;
+    }
+} 
